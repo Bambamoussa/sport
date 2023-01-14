@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sport/feature/presentation/pages/home_page.dart';
+import 'package:sport/feature/sports/presentation/pages/home_page.dart';
 import 'di/injection_container.dart' as di;
 
 void main() {
