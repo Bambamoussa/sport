@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SportsEntity {
-  int get idSport => throw _privateConstructorUsedError;
+  String get idSport => throw _privateConstructorUsedError;
   String get strSportr => throw _privateConstructorUsedError;
   String get strFormat => throw _privateConstructorUsedError;
   String get strSportThumb => throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ abstract class $SportsEntityCopyWith<$Res> {
       _$SportsEntityCopyWithImpl<$Res, SportsEntity>;
   @useResult
   $Res call(
-      {int idSport,
+      {String idSport,
       String strSportr,
       String strFormat,
       String strSportThumb,
@@ -64,7 +64,7 @@ class _$SportsEntityCopyWithImpl<$Res, $Val extends SportsEntity>
       idSport: null == idSport
           ? _value.idSport
           : idSport // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       strSportr: null == strSportr
           ? _value.strSportr
           : strSportr // ignore: cast_nullable_to_non_nullable
@@ -94,7 +94,7 @@ abstract class _$$_SportsEntityCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int idSport,
+      {String idSport,
       String strSportr,
       String strFormat,
       String strSportThumb,
@@ -122,7 +122,7 @@ class __$$_SportsEntityCopyWithImpl<$Res>
       idSport: null == idSport
           ? _value.idSport
           : idSport // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       strSportr: null == strSportr
           ? _value.strSportr
           : strSportr // ignore: cast_nullable_to_non_nullable
@@ -154,7 +154,7 @@ class _$_SportsEntity implements _SportsEntity {
       required this.strSportDescription});
 
   @override
-  final int idSport;
+  final String idSport;
   @override
   final String strSportr;
   @override
@@ -198,14 +198,14 @@ class _$_SportsEntity implements _SportsEntity {
 
 abstract class _SportsEntity implements SportsEntity {
   const factory _SportsEntity(
-      {required final int idSport,
+      {required final String idSport,
       required final String strSportr,
       required final String strFormat,
       required final String strSportThumb,
       required final String strSportDescription}) = _$_SportsEntity;
 
   @override
-  int get idSport;
+  String get idSport;
   @override
   String get strSportr;
   @override

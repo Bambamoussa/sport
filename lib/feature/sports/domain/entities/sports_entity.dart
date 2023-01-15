@@ -5,7 +5,7 @@ part 'sports_entity.freezed.dart';
 @freezed
 class SportsEntity with _$SportsEntity {
   const factory SportsEntity({
-   required int idSport,
+   required String idSport,
    required String strSportr,
    required String strFormat,
    required String strSportThumb,

@@ -21,7 +21,7 @@ SportsModels _$SportsModelsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SportsModels {
   @JsonKey(name: 'idSport')
-  int get idSport => throw _privateConstructorUsedError;
+  String get idSport => throw _privateConstructorUsedError;
   @JsonKey(name: 'strSport')
   String get strSportr => throw _privateConstructorUsedError;
   @JsonKey(name: 'strFormat')
@@ -44,7 +44,7 @@ abstract class $SportsModelsCopyWith<$Res> {
       _$SportsModelsCopyWithImpl<$Res, SportsModels>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'idSport') int idSport,
+      {@JsonKey(name: 'idSport') String idSport,
       @JsonKey(name: 'strSport') String strSportr,
       @JsonKey(name: 'strFormat') String strFormat,
       @JsonKey(name: 'strSportThumb') String strSportThumb,
@@ -74,7 +74,7 @@ class _$SportsModelsCopyWithImpl<$Res, $Val extends SportsModels>
       idSport: null == idSport
           ? _value.idSport
           : idSport // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       strSportr: null == strSportr
           ? _value.strSportr
           : strSportr // ignore: cast_nullable_to_non_nullable
@@ -104,7 +104,7 @@ abstract class _$$_SportsModelsCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'idSport') int idSport,
+      {@JsonKey(name: 'idSport') String idSport,
       @JsonKey(name: 'strSport') String strSportr,
       @JsonKey(name: 'strFormat') String strFormat,
       @JsonKey(name: 'strSportThumb') String strSportThumb,
@@ -132,7 +132,7 @@ class __$$_SportsModelsCopyWithImpl<$Res>
       idSport: null == idSport
           ? _value.idSport
           : idSport // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       strSportr: null == strSportr
           ? _value.strSportr
           : strSportr // ignore: cast_nullable_to_non_nullable
@@ -168,7 +168,7 @@ class _$_SportsModels implements _SportsModels {
 
   @override
   @JsonKey(name: 'idSport')
-  final int idSport;
+  final String idSport;
   @override
   @JsonKey(name: 'strSport')
   final String strSportr;
@@ -225,7 +225,7 @@ class _$_SportsModels implements _SportsModels {
 abstract class _SportsModels implements SportsModels {
   const factory _SportsModels(
       {@JsonKey(name: 'idSport')
-          required final int idSport,
+          required final String idSport,
       @JsonKey(name: 'strSport')
           required final String strSportr,
       @JsonKey(name: 'strFormat')
@@ -240,7 +240,7 @@ abstract class _SportsModels implements SportsModels {
 
   @override
   @JsonKey(name: 'idSport')
-  int get idSport;
+  String get idSport;
   @override
   @JsonKey(name: 'strSport')
   String get strSportr;

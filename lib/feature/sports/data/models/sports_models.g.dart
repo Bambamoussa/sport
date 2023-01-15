@@ -8,7 +8,7 @@ part of 'sports_models.dart';
 
 _$_SportsModels _$$_SportsModelsFromJson(Map<String, dynamic> json) =>
     _$_SportsModels(
-      idSport: json['idSport'] as int,
+      idSport: json['idSport'] as String,
       strSportr: json['strSport'] as String,
       strFormat: json['strFormat'] as String,
       strSportThumb: json['strSportThumb'] as String,

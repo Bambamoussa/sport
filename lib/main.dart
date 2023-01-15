@@ -1,8 +1,21 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:sport/core/router/route_generator.dart';
+import 'package:sport/core/router/router.dart';
 import 'package:sport/feature/sports/presentation/pages/home_page.dart';
 import 'di/injection_container.dart' as di;
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
+}
 
 void main() {
+   HttpOverrides.global = MyHttpOverrides();
   di.init();
   runApp(const MyApp());
 }
@@ -29,6 +42,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
       ),
       home: const HomePage(),
+      onGenerateRoute:RouteGenerator.generateRoute,
+      initialRoute: Routes.home,
     );
   }
 }

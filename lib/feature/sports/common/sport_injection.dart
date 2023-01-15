@@ -7,14 +7,14 @@ void _featureSport() {
         () => SportRemoteDataSourceImpl(dio: dio))
 
     // Network
-    ..injectNetwork<NetworkInfo>(() => NetworkInfoImpl())
+    ..injectNetwork<NetworkInfo>(NetworkInfoImpl.new)
     // Repositories
     ..injectRepository<SportsRepository>(() =>
-        SportsRepositoryImpl( sportsRemoteDataSource: sl(), networkInfo: sl()));
+        SportsRepositoryImpl( sportsRemoteDataSource: sl(), networkInfo: sl()))
     // UseCases
-   // ..injectUseCase<MoviesUseCases>(() => MoviesUseCases(sl()))
+    ..injectUseCase< SportUseCases>(() => SportUseCases(sl()))
     //Cubit
-   // ..injectCubit<NavigationCubit>(() => NavigationCubit())
+    ..injectCubit<SportCubit>(() => SportCubit(sportUseCases: sl()));
    // ..injectCubit<MoviesCubit>(() => MoviesCubit(moviesUseCases: sl()))
    // ..injectCubit<WishListCubit>(() => WishListCubit());
 }

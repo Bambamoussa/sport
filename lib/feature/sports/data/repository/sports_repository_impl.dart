@@ -29,8 +29,8 @@ class SportsRepositoryImpl extends SportsRepository  with BaseRepository {
       final sportResponse = await  sportsRemoteDataSource.getAllSport();
 
       final sports = List<SportsEntity>.from(
-        (sportResponse['sports'] as List<Map<String, dynamic>>)
-            .map((e) => SportsModels.fromJson(e).toDomain()),
+        (sportResponse['sports'] as List<dynamic>)
+            .map((e) => SportsModels.fromJson(e as Map<String, dynamic>).toDomain()),
       );
       return Result.success(sports);
     } on Exception catch (e) {

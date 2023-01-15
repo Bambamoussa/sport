@@ -32,12 +32,12 @@ class Failure with _$Failure {
     }
   }
 
-  String? errorMessageWidget(BuildContext context) {
+  String errorMessageWidget( ) {
     if (this is FailureOffline || this is FailureTimeout) {
       return "pas de connexion";
     } else if (this is FailureServer) {
       return "application en maintenance";
     }
-    return null;
+    return "problem";
   }
 }
