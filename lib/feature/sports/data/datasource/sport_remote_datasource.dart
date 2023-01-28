@@ -4,6 +4,7 @@ import 'package:sport/core/data/datasource/remote_data_source.dart';
 
 abstract class SportsRemoteDataSource {
   Future<dynamic> getAllSport();
+  Future<dynamic> getLeague(String name);
 }
 
 class SportRemoteDataSourceImpl extends RemoteDataSource
@@ -16,4 +17,8 @@ class SportRemoteDataSourceImpl extends RemoteDataSource
     return performGetRequestApi(
         apiEndpoint: ApiConstants.allSport(), options: options);
   }
+  
+  @override
+  Future getLeague(String name) => performGetRequestApi(apiEndpoint: ApiConstants.leagueName(name));
+  
 }

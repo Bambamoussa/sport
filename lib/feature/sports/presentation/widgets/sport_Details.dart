@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sport/feature/sports/domain/entities/sports_entity.dart';
+import 'package:sport/feature/sports/presentation/pages/league_page.dart';
 import 'package:sport/feature/sports/presentation/widgets/my_app_bar.dart';
 
 class SportDetails extends StatelessWidget {
@@ -14,19 +15,9 @@ class SportDetails extends StatelessWidget {
       body: Column(
         children: <Widget>[
           _DetailsWidgets( sport: sport, height: midHeight,),
-          /*Expanded(
-            child: StreamBuilder<List<League>>(
-              stream: bloc.stream,
-                builder: (ctx, snap) {
-                  if (snap == null) {
-                    return NoData("Aucune Données");
-                  } else if (!snap.hasData) {
-                    return NoData("N'a pas de données");
-                  } else {
-                    return ListLeague(snap.data);                  }
-                }
-            ),
-          )*/
+           Expanded(
+            child:  LeaguePage(name: sport.strSportr,)
+          )
         ],
       ),
     );
